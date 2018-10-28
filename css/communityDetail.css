@@ -3,6 +3,8 @@
 * {
     padding: 0;
     margin: 0;
+    min-height: 0;
+    min-width: 0;
 }
 
 body	{font-family: '맑은 고딕', 'Apple SD Gothic Neo', sans-serif}
@@ -45,7 +47,6 @@ body	{font-family: '맑은 고딕', 'Apple SD Gothic Neo', sans-serif}
 .homeButton:hover {
     cursor: pointer;
 }
-
 
 /*메뉴 CSS*/
 
@@ -216,138 +217,157 @@ body	{font-family: '맑은 고딕', 'Apple SD Gothic Neo', sans-serif}
 .box5 .brPlz {
 }
 
-/*게임보드 css*/
+/*왼쪽 메뉴 css*/
 
-.box3 {
-}
-
-.gameBoardFrame {
-    width: 80%;
-    margin: auto;
-}
-
-.gameBoardFrame .gameBoardMenu {
-    margin-top: 10px;
-    border-bottom: 1px solid #999999;
-}
-
-.gameBoardFrame .gameBoardMenu .gameBoardMenuChild{
+.leftMenuFrame {
     float: left;
-    padding: 0 10px 0;
+    border: 2px solid #999999;
+    width: 137.250px;
 }
 
-.gameBoardFrame .gameBoardMenu .gameBoardMenuChild:hover {
+.leftMenuFrame .leftMenu {
+    list-style: none;
+}
+
+.leftMenuFrame .leftMenu .leftMenuTitle {
+    padding: 7px;
+    background: #EEEEEE;
+    border-bottom: 2px solid #999999;
+}
+
+.leftMenuFrame .leftMenu .leftMenuContent {
+    padding: 2px 7px;
+}
+
+.leftMenuFrame .leftMenu .leftMenuContent:hover {
     cursor: pointer;
-    color: #BBBBBB;
+    color: red;
 }
 
-.gameBoardFrame .gameBoardMenu .gameBoardMenuChild:first-child {
-    color: #BBBBBB;
-    border-bottom: 3px solid #ff7a00;
+.leftMenuFrame .leftMenu .active {
+    color: red;
 }
 
-.gameBoardFrame .gameBoardMenu:after {
+/*게시판 본문 css*/
+
+.mainFrame {
+    float: left;
+    margin-left: 10px;
+    max-width: 1000px;
+    min-width: 758px;
+    padding-right: 10px;
+}
+
+.box3:after {
     content: "";
     display: block;
     clear: both;
 }
 
-.gameBoardFrame .gameBoardContent {
+.mainFrame .boardSep {
+    border-bottom: 2px solid;
+    padding: 2px 2px 5px;
+    margin-bottom: 20px;
+}
+
+.mainFrame .contentTitle {
+    border-bottom: 2px solid;
+    padding-bottom: 10px;
+}
+
+.mainFrame .boardInformationFirstLine {
+    padding: 5px 0;
+}
+.mainFrame .boardInformationFirstLine:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.mainFrame .boardInformationSecondLine:after {
+    content: "";
+    display: block;
+    clear: both;
+    border-bottom: 2px solid;
+    padding-bottom: 5px;
+}
+
+.mainFrame .boardInformationLeft {
+    float: left;
+}
+.mainFrame .boardInformationRight{
+    float: right;
+}
+
+.mainFrame .contentContent {
+    border: 2px solid #BBBBBB;
+    border-radius: 4%;
+    max-width: 700px;
+    min-height: 400px;
+    margin: 30px auto;
+    padding: 10px;
+}
+.mainFrame .contentContent img {
+    display: block;
+    margin: auto;
+    width: 600px;
+}
+
+/*추천 버튼 css*/
+
+.upDownButton {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.upDownButton span {
+    border: 5px solid #BBBBBB;
+    padding: 5px;
+    border-radius: 5em;
+    width: 10em;
+}
+
+.upDownButton span:hover {
+    cursor: pointer;
     
 }
 
-.gameBoardFrame .gameBoardContent .gameBoardContentChild{
-    padding: 10px;
-    border-bottom: 1px solid #999999;
+.upDownButton .thumsUp {
+    margin-right: 50px;
 }
 
-.gameBoardFrame .gameBoardContent .gameBoardContentChild .gameBoardContentChildImg {
-    float: left;
-    width: 4em;
-    border: 2px;
-    border-style: solid;
-    margin: 0 10px 0 0;
+/*게시판 컨트롤 버튼 css*/
+
+.boardControlButton {
+    text-align: right;
+    margin: 30px 0;
 }
 
-.gameBoardFrame .gameBoardContent .gameBoardContentChild .gameBoardContentChildContent {
-    list-style: none;
+.boardControlButton span {
+    border: 2px solid #BBBBBB;
+    padding: 5px;
+    border-radius: 0.4em;
 }
 
-.gameBoardFrame .gameBoardContent .gameBoardContentChild .gameBoardContentChildContent:after {
-    content: "";
-    display: block;
-    clear: both;
-}
-
-.gameBoardFrame .gameBoardContent .gameBoardContentChild .gameBoardContentChildContent
-.gameBoardContentChildTitle {
-    font-size: 1.5em;
-}
-
-.style1
-{
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
-
-.style1 li
-{
-    border-top: solid 1px #a7a7a7;
-    padding: 0.40em;
-}
-
-.style1 li:first-child
-{
-    margin-top: 15px;
-}
-
-.style1 li:last-child
-{
-    border-bottom: solid 1px #a7a7a7;
-}
-
-/*페이지 번호*/
-
-.gameBoardFrame .pageNumber .pageNumberFrame .pageNumberButton {
-    float: left;
-    margin: 5px;
-}
-
-.gameBoardFrame .pageNumber .pageNumberFrame .one {
-    color: #BBBBBB;
-}
-
-.gameBoardFrame .pageNumber .pageNumberFrame .pageNumberButton:hover {
-    cursor: pointer;
-    color: #BBBBBB;
-}
-
-.gameBoardFrame .pageNumber .pageNumberFrame .barFloat {
-    float: left;
-    margin: 5px 0;
-}
-
-.gameBoardFrame .pageNumber .pageNumberFrame {
-    list-style: none;
-    display: inline-block;
-}
-
-.gameBoardFrame .pageNumber .pageNumberFrame:after {
-    content: "";
-    display: block;
-    clear: both;
-}
-
-.gameBoardFrame .pageNumber {
-    text-align: center;
-}
-
-.gameBoardContent .gameBoardContentChildContent:hover {
+.boardControlButton span:hover {
     cursor: pointer;
 }
 
-.gameBoardContent .gameBoardContentChild .gameBoardContentChildImg:hover {
-    cursor: pointer;
+.boardControlButton span:last-child {
+    margin-right: 20px
+}
+
+/*미디어 Css*/
+
+@media (max-width: 937px) {
+    .leftMenuFrame {
+        display: none;
+    }
+    
+    .mainFrame {
+        float: none;
+        margin: auto;
+        padding: 0 10px;
+    }
 }
 

@@ -42,6 +42,10 @@ body	{font-family: '맑은 고딕', 'Apple SD Gothic Neo', sans-serif}
     margin: 0px 10px;
 }
 
+.homeButton:hover {
+    cursor: pointer;
+}
+
 /*메뉴 CSS*/
 
 .gnb {
@@ -53,19 +57,19 @@ body	{font-family: '맑은 고딕', 'Apple SD Gothic Neo', sans-serif}
 }
 .gnb ul {
 }
-.gnb li {
+.gnbClear>li {
     float: left;
     list-style: none;
 }
-.gnb li:after {
+.gnbClear>li {
     content: "";
     margin: 0px 10px;
 }
-.gnb li:last-child:after {
+.gnbClear>li:last-child:after {
     content: "";
 }
 
-.gnb li:hover {
+.gnbClear>li:hover .menuTitle{
     color: #BBBBBB;
     cursor: pointer;
 }
@@ -74,6 +78,116 @@ body	{font-family: '맑은 고딕', 'Apple SD Gothic Neo', sans-serif}
     content: "";
     display: block;
     clear: both;
+}
+
+.depthSubGameLeft ul {
+    list-style: none;
+}
+
+.gnbClear>.gameBoardMenu:hover .depthSubGame {
+    display: flex;
+    opacity:1; 
+    left:20px; 
+    background: #FFFFFF;
+    width: 750px;
+    height: 200px;
+}
+
+.depthSubGameLeft {
+    border-right: 2px dashed #AAAAAA;
+    padding: 10px;
+    flex: 0.1;
+    display: flex;
+    flex-direction: column;
+}
+
+.depthSubGameLeft .depthSubGameLeftContent {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.depthSubGameLeftContent .active {
+    color: red;
+}
+
+.depthSubGameLeft .depthSubGameLeftContent li {
+    flex: 1;
+}
+
+.depthSubGameLeft .depthSubGameLeftContent li:hover {
+    cursor: pointer;
+    color: red;
+}
+
+.depthSubGameRight {
+    padding: 10px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.depthSubGameRight>span {
+    flex: 0.1;
+}
+
+.depthSubGameRightFrame {
+    flex: 1;
+    display: flex;
+    margin-bottom: 10px
+}
+
+.depthSubGameRightItem {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.depthSubGameRightItem img:hover {
+    cursor: pointer;
+}
+
+.depthSubGameRightItem span:hover {
+    cursor: pointer;
+}
+
+.depthSubGameRightItem img {
+    width: 60px;
+    height: 80px;
+    border: 1px solid;
+    display: block;
+    margin: auto;
+}
+
+.depthSubGame {
+    display: none;
+    position: absolute; 
+    opacity:0;
+    transition:all 0.4s; 
+    border: 2px solid #BBBBBB;
+}
+
+.depthSubCommunity {
+    display: none;
+    position: absolute;
+    border: 2px solid #BBBBBB;
+    padding: 10px;
+}
+
+.gnbClear>.communityMenu:hover .depthSubCommunity {
+    display: flex;
+    left:230px; 
+    background: #FFFFFF;
+}
+
+.depthSubCommunityContent {
+    list-style: none;
+}
+
+.depthSubCommunityContent li:hover {
+    cursor: pointer;
+    color: red;
 }
 
 /*푸터 css*/
@@ -146,16 +260,12 @@ body	{font-family: '맑은 고딕', 'Apple SD Gothic Neo', sans-serif}
     border-bottom: 1px solid #999999;
 }
 
-.communityBoardFrame .communityBoardContent .communityBoardContentChild .communityBoardContentChildImg {
-    float: left;
-    width: 4em;
-    border: 2px;
-    border-style: solid;
-    margin: 0 10px 0 0;
-}
-
 .communityBoardFrame .communityBoardContent .communityBoardContentChild .communityBoardContentChildContent {
     list-style: none;
+}
+
+.communityBoardFrame .communityBoardContent .communityBoardContentChild .communityBoardContentChildContent:hover {
+    cursor: pointer;
 }
 
 .communityBoardFrame .communityBoardContent .communityBoardContentChild .communityBoardContentChildContent:after {

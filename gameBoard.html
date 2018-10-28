@@ -5,14 +5,34 @@
     <title>게임에 대한 모든 것! GAME IT</title>
     <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" href="./css/gameBoard.css">
+    <script src="./js/jquery.min.js" type="text/javascript"></script>
     <!--<link rel="stylesheet" href="./css/grid-guide.css">-->
+    <script type="text/javascript">
+        $(document).ready(function() {            
+            $(".gameBoardContentChildImg").click(function() {
+                	location.href = "./gameBoardDetail.html";
+            });
+            $(".gameBoardContentChildContent").click(function() {
+                	location.href = "./gameBoardDetail.html";
+            });
+            $(".gameBoardMenu>.menuTitle").click(function() {
+                	location.href = "./gameBoard.html";
+            });
+            $(".communityMenu>.menuTitle").click(function() {
+                	location.href = "./community.html";
+            });
+            $(".homeButton").click(function() {
+                	location.href = "./index.html";
+            });
+        });
+    </script>
 </head>
 <body>
     <div class="box1">
         
         <header>
             <div class="left_header">
-               <img src="./img/GAMEIT.png" alt="GAMEIT LOGO">
+               <img src="./img/GAMEIT.png" alt="GAMEIT LOGO" class="homeButton">
             </div>
             <div class="right_header">
                 <div class="registin">
@@ -27,11 +47,74 @@
     <div class="box2">
         <nav class="gnb">
             <ul class="gnbClear">
-                <li>게임 추천</li>
-                <li>이벤트 / 할인</li>
-                <li>커뮤니티</li>
-                <li>중고 / 나눔</li>
-                <li>고객센터</li>
+                <li class="gameBoardMenu">
+                    <span class="menuTitle">게임 추천</span>
+                    <div class="depthSubGame">
+                        <div class="depthSubGameLeft">
+                            <ul class="depthSubGameLeftContent">
+                                <li class="depthSubGameAll active">전체</li>
+                                <li class="depthSubGamePC">PC</li>
+                                <li class="depthSubGameConsole">콘솔</li>
+                                <li class="depthSubGamePortable">포터블</li>
+                                <li class="depthSubGameMobile">모바일</li>
+                                <li class="depthSubGameOnline">온라인</li>
+                            </ul>
+                        </div>
+                        <div class="depthSubGameRight">
+                            <span>
+                                인기 추천 글
+                            </span>
+                            <div class="depthSubGameRightFrame">
+                                <div class="depthSubGameRightItem">
+                                    <img src="img/noneImage.jpg" alt="">
+                                    <span>게시글 제목</span>
+                                    <span>상품 명</span>
+                                </div>
+                                <div class="depthSubGameRightItem">
+                                    <img src="img/noneImage.jpg" alt="">
+                                    <span>게시글 제목</span>
+                                    <span>상품 명</span>
+                                </div>
+                                <div class="depthSubGameRightItem">
+                                    <img src="img/noneImage.jpg" alt="">
+                                    <span>게시글 제목</span>
+                                    <span>상품 명</span>
+                                </div>
+                                <div class="depthSubGameRightItem">
+                                    <img src="img/noneImage.jpg" alt="">
+                                    <span>게시글 제목</span>
+                                    <span>상품 명</span>
+                                </div>
+                                <div class="depthSubGameRightItem">
+                                    <img src="img/noneImage.jpg" alt="">
+                                    <span>게시글 제목</span>
+                                    <span>상품 명</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="eventBoardMenu">
+                    <span class="menuTitle">이벤트 / 할인</span>
+                </li>
+                <li class="communityMenu">
+                    <span class="menuTitle">커뮤니티</span>
+                    <div class="depthSubCommunity">
+                        <ul class="depthSubCommunityContent">
+                            <li class="depthSubCommunityAll">전체 글</li>
+                            <li class="depthSubCommunityBest">추천 글</li>
+                            <li class="depthSubCommunityFree">자유 게시판</li>
+                            <li class="depthSubCommunityTalk">토론 게시판</li>
+                            <li class="depthSubCommunityBreak">공략 게시판</li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="commercialMenu">
+                    <span class="menuTitle">중고 / 나눔</span>
+                </li>
+                <li class="qnaMenu">
+                    <span class="menuTitle">고객센터</span>
+                </li>
             </ul>
         </nav>
     </div>
