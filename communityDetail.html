@@ -11,32 +11,119 @@
     <script type="text/javascript">
         $(document).ready(function() {            
             $(".leftMenuContent").click(function() {
-                	location.href = "./community.html";
+                location.href = "./community.html";
             });
             $(".gameBoardMenu>.menuTitle").click(function() {
-                	location.href = "./gameBoard.html";
+                location.href = "./gameBoard.html";
             });
             $(".communityMenu>.menuTitle").click(function() {
-                	location.href = "./community.html";
+                location.href = "./community.html";
+            });
+            $(".mobileGB").click(function() {
+                location.href = "./gameBoard.html";
+            });
+            $(".mobileCommunity").click(function() {
+                location.href = "./community.html";
+            });
+            $(".smallLeftFrame>.fa-home").click(function() {
+                location.href = "./index.html";
+            });
+            $(".smallLeftFrame>.fa-comments").click(function() {
+                location.href = "./community.html";
             });
             $(".homeButton").click(function() {
-                	location.href = "./index.html";
+                location.href = "./index.html";
+            });
+            $(".leftMenuTitle").click(function() {
+                $(".leftMenuContent").removeClass("hideThis");
+                $(".leftMenuContent").addClass("showThis");
+                $(".leftMenuTitleHide").removeClass("hideThis");
+                $(".leftMenuTitleHide").addClass("showThis");
+                $(this).removeClass("showThis");
+                $(this).addClass("hideThis");
+            });
+            $(".leftMenuTitleHide").click(function() {
+                $(".leftMenuContent").removeClass("showThis");
+                $(".leftMenuContent").addClass("hideThis");
+                $(".leftMenuTitle").removeClass("hideThis");
+                $(".leftMenuTitle").addClass("showThis");
+                $(this).removeClass("showThis");
+                $(this).addClass("hideThis");
+            });
+            $(".fa-user").click(function(){
+                $(".openMobileUserMenu").css("left","20%");
+                $(".openMobileGnbMenu").css("right","100%");
+                $(".openMobileGnbMenuUl").css("display","none");
+                $(".openMobileUserMenuUl").css("display","block");
+                $(".backgroundGray").removeClass("hideThis");
+                $(".backgroundGray").addClass("showThis");
+            });
+            $(".mobileCloseButton").click(function(){
+                $(".openMobileUserMenu").css("left","100%");
+                $(".openMobileUserMenuUl").css("display","none");
+                $(".backgroundGray").removeClass("showThis");
+                $(".backgroundGray").addClass("hideThis");
+            });
+            $(".fa-bars").click(function(){
+                $(".openMobileUserMenu").css("left","100%");
+                $(".openMobileGnbMenu").css("right","20%");
+                $(".openMobileGnbMenuUl").css("display","block");
+                $(".backgroundGray").removeClass("hideThis");
+                $(".backgroundGray").addClass("showThis");
+            });
+            $(".mobileCloseButton").click(function(){
+                $(".openMobileGnbMenu").css("right","100%");
+                $(".openMobileGnbMenuUl").css("display","none");
+                $(".backgroundGray").removeClass("showThis");
+                $(".backgroundGray").addClass("hideThis");
             });
         });
     </script>
 </head>
 <body>
+   
+    <div class="backgroundGray tooBig"></div>
     <div class="box1">
         <header>
             <div class="left_header">
-               <img src="./img/GAMEIT.png" alt="GAMEIT LOGO" class="homeButton">
-            </div>
-            <div class="right_header">
-                <div class="registin">
-                    회원가입
+                <div class="menuIconControl">
+                    <span class="fas fa-bars"></span>
                 </div>
-                <div class="login">
-                    로그인
+                <div class="openMobileGnbMenu">
+                    <ul class="openMobileGnbMenuUl">
+                        <li class="openMobileGnbMenuLi mobileClose">
+                            <span class="mobileCloseButton">Ⅹ</span>
+                        </li>
+                        <li class="openMobileGnbMenuLi mobileGB">게임 추천</li>
+                        <li class="openMobileGnbMenuLi mobileEvent">이벤트 / 할인</li>
+                        <li class="openMobileGnbMenuLi mobileCommunity">커뮤니티</li>
+                        <li class="openMobileGnbMenuLi mobileCommercial">중고 / 나눔</li>
+                        <li class="openMobileGnbMenuLi mobileQnA">고객센터</li>
+                    </ul>
+                </div>
+            </div>
+            <img src="./img/GAMEIT.png" alt="GAMEIT LOGO" class="homeButton">
+            <div class="right_header">
+                <div class="userIconControl">
+                    <span class="fas fa-user"></span>
+                </div>
+                <div class="userHeaderControl">
+                    <div class="registin">
+                        회원가입
+                    </div>
+                    <div class="login">
+                        로그인
+                    </div>
+                </div>
+                <div class="openMobileUserMenu">
+                    <ul class="openMobileUserMenuUl">
+                        <li class="openMobileUserMenuLi mobileClose">
+                            <span class="mobileCloseButton">Ⅹ</span>
+                        </li>
+                        <li class="openMobileUserMenuLi mobileLogin">로그인</li>
+                        <li class="openMobileUserMenuLi">회원가입</li>
+                        <li class="openMobileUserMenuLi">ID / PW 찾기</li>
+                    </ul>
                 </div>
             </div>
         </header>
@@ -90,6 +177,16 @@
                             </div>
                         </div>
                     </div>
+                    <div class="depthSubGameSmall">
+                        <ul class="depthSubGameSmallContent">
+                            <li class="depthSubGameSmallAll active">전체</li>
+                            <li class="depthSubGameSmallSmallPC">PC</li>
+                            <li class="depthSubGameSmallConsole">콘솔</li>
+                            <li class="depthSubGameSmallPortable">포터블</li>
+                            <li class="depthSubGameSmallSmallMobile">모바일</li>
+                            <li class="depthSubGameSmallOnline">온라인</li>
+                        </ul>
+                    </div>
                 </li>
                 <li class="eventBoardMenu">
                     <span class="menuTitle">이벤트 / 할인</span>
@@ -118,17 +215,24 @@
     <div class="box3">
         <div class="leftMenuFrame">
             <ul class="leftMenu">
-                <li class="leftMenuTitle">커뮤니티</li>
-                <li class="leftMenuContent active">전체 글</li>
-                <li class="leftMenuContent">추천 글</li>
-                <li class="leftMenuContent">자유게시판</li>
-                <li class="leftMenuContent">토론게시판</li>
-                <li class="leftMenuContent">공략게시판</li>
+                <li class="leftMenuTitle">커뮤니티 ▼</li>
+                <li class="leftMenuTitleHide hideThis tooBig">커뮤니티 ▲</li>
+                <li class="leftMenuContent active hideThis">전체 글</li>
+                <li class="leftMenuContent hideThis">추천 글</li>
+                <li class="leftMenuContent hideThis">자유게시판</li>
+                <li class="leftMenuContent hideThis">토론게시판</li>
+                <li class="leftMenuContent hideThis">공략게시판</li>
             </ul>
         </div>
         <div class="mainFrame">
+            <div class="smallLeftFrame">
+                <span class="fas fa-home"> 홈</span>
+                <i class="fas fa-angle-right"></i>
+                <span class="fas fa-comments"> 커뮤니티</span>
+                <i class="fas fa-angle-right"></i>
+                <span class="fas fa-clipboard-list"> 자유게시판</span>
+            </div>
             <div class="boardSep">
-               이 위에 홈 > 커뮤니티 > 자유게시판 해서 드롭다운 만들기
                 | 자유게시판
             </div>
             <div class="contentTitle">
@@ -156,8 +260,8 @@
             </div>
             <div class="boardControlButton">
                 <div>
-                    <span>글 작성</span>
-                    <span>글 목록</span>
+                    <span class="fas">글 작성</span>
+                    <span class="fas">글 목록</span>
                     <span class="fas fa-arrow-circle-up prevBoard"> 이전 글</span>
                     <span class="fas fa-arrow-circle-down nextBoard"> 다음 글</span>
                 </div>

@@ -7,6 +7,17 @@
 
 body	{font-family: '맑은 고딕', 'Apple SD Gothic Neo', sans-serif}
 
+.backgroundGray {
+    position: fixed;
+    left: 0%;
+    top: 0%;
+    bottom: 0%;
+    right: 0%;
+    background: #222222;
+    z-index: 80;
+    opacity: 0.8;
+}
+
 /*헤더 CSS*/
 
 .box1 header:after {
@@ -14,6 +25,15 @@ body	{font-family: '맑은 고딕', 'Apple SD Gothic Neo', sans-serif}
     display: block;
     clear: both;
 }
+
+.box1 header .homeButton{
+    position: absolute;
+    float: left;
+    margin: 10px;
+    display: block;
+    width: 150px;
+}
+
 .box1 header .left_header{
     float: left;
     width: 30%;
@@ -28,10 +48,6 @@ body	{font-family: '맑은 고딕', 'Apple SD Gothic Neo', sans-serif}
     line-height: 40px;
 }
 
-.box1 header .left_header img{
-    vertical-align: middle;
-    width: 150px;
-}
 .box1 header .right_header div{
     float: right;
     vertical-align: middle;
@@ -44,6 +60,26 @@ body	{font-family: '맑은 고딕', 'Apple SD Gothic Neo', sans-serif}
 
 .homeButton:hover {
     cursor: pointer;
+}
+
+.userIconControl {
+    display: none;
+}
+
+.menuIconControl {
+    display: none;
+}
+
+.userHeaderControl {
+    display: block;
+}
+
+.openMobileUserMenu {
+    display: none;
+}
+
+.openMobileGnbMenu {
+    display: none;
 }
 
 /*메뉴 CSS*/
@@ -115,7 +151,7 @@ body	{font-family: '맑은 고딕', 'Apple SD Gothic Neo', sans-serif}
     flex: 1;
 }
 
-.depthSubGameLeft .depthSubGameLeftContent li:hover {
+.depthSubGameLeft .depthSubGameLeftContent li:hover, .depthSubGameSmall .depthSubGameSmallContent li:hover {
     cursor: pointer;
     color: red;
 }
@@ -175,13 +211,24 @@ body	{font-family: '맑은 고딕', 'Apple SD Gothic Neo', sans-serif}
     padding: 10px;
 }
 
+.depthSubGameSmall {
+    display: none;
+    position: absolute;
+    border: 2px solid #BBBBBB;
+    padding: 10px;
+    width: 100px;
+    left:20px; 
+    background: #FFFFFF;
+    z-index: 100;
+}
+
 .gnbClear>.communityMenu:hover .depthSubCommunity {
     display: flex;
     left:230px; 
     background: #FFFFFF;
 }
 
-.depthSubCommunityContent {
+.depthSubCommunityContent, .depthSubGameSmallContent {
     list-style: none;
 }
 
@@ -344,4 +391,181 @@ body	{font-family: '맑은 고딕', 'Apple SD Gothic Neo', sans-serif}
 .communityBoardFrame .pageNumber {
     text-align: center;
 }
+
+.hideThis{
+    display: none;
+}
+
+.showThis{
+    display: block;
+}
+
+/*미디어 쿼리*/
+
+@media (min-width:590px) and (max-width:798px) {
+    
+    .gnbClear>.gameBoardMenu:hover .depthSubGame {
+        display: none;
+    }
+    
+    .gnbClear>.gameBoardMenu:hover .depthSubGameSmall {
+        display: flex;
+    }
+}
+
+@media (max-width:590px) {
+    
+/*    메뉴 제거*/
+    
+    .gnb {
+        display: none;
+    }
+    
+/*    헤더 css*/
+    
+    .box1 header .homeButton{
+        position: relative;
+        float: none;
+        padding: 10px;
+        display: block;
+        margin: auto;
+        width: 150px;
+    }
+    
+    .box1 header:after {
+        content: "";
+        display: block;
+        clear: both;
+    }
+    .box1 header .left_header{
+        line-height: 40px;
+    }
+    .box1 header .right_header{
+        position: absolute;
+        right: 0%;
+        top: 0%;
+        width: 50px;
+        text-align: right;
+        padding: 10px 10px 10px 0px;
+        line-height: 40px;
+    }
+    
+    .box1 header .left_header{
+        position: absolute;
+        left: 0%;
+        top: 0%;
+        width: 50px;
+        text-align: right;
+        padding: 15px 0px 10px 10px;
+        line-height: 40px;
+    }
+
+    .box1 header .left_header img{
+        display: block;
+        margin: auto;
+        width: 150px;
+    }
+    .box1 header .right_header div{
+        float: right;
+        vertical-align: middle;
+    }
+
+    .homeButton {
+        height: 40px;
+    }
+
+    .userIconControl {
+        display: block;
+    }
+    
+    .menuIconControl {
+        display: block;
+    }
+    
+    .fa-user {
+        font-size: 1.5em;
+        margin-right: 10px;
+    }
+    
+    .fa-user,.fa-bars:hover {
+        cursor: pointer;
+    }
+    
+    .fa-bars {
+        font-size: 1.5em;
+        margin-left: 10px;
+        float: left;
+    }
+    
+    .userHeaderControl {
+        display: none;
+    }
+    
+    .openMobileUserMenu {
+        display: block;
+        transition: all 0.3s;
+        position: fixed;
+        right: 0%;
+        left: 100%;
+        top: 0%;
+        bottom: 0%;
+        background: #525ca3;
+        padding: 10px;
+        color: white;
+        z-index: 100;
+    }
+    
+    .openMobileGnbMenu {
+        display: block;
+        transition: all 0.3s;
+        position: fixed;
+        right: 100%;
+        left: 0%;
+        top: 0%;
+        bottom: 0%;
+        background: #525ca3;
+        color: white;
+        z-index: 100;
+    }
+    
+    .openMobileUserMenuUl, .openMobileGnbMenuUl {
+        list-style: none;
+        text-align: left;
+    }
+    
+    .openMobileGnbMenuUl {
+        display: none;
+        margin: 10px;
+    }
+    
+    .openMobileUserMenuLi, .openMobileGnbMenuLi {
+        padding: 0px 10px;
+        border-bottom: 1px solid #afceff;
+    }
+        
+    .openMobileUserMenuUl .mobileClose {
+        text-align: right;
+    }
+    
+    .mobileCloseButton:hover {
+        cursor: pointer
+    }
+    
+/*    설정 css*/
+    
+    .hideThis{
+        display: none;
+    }
+
+    .showThis{
+        display: block;
+    }
+    
+    /*    푸터 글씨 크기 조절*/
+    
+    footer ul {
+        font-size: 0.7em;
+    }
+}
+
 
