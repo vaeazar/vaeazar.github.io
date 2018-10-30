@@ -7,6 +7,8 @@
 
 body	{font-family: '맑은 고딕', 'Apple SD Gothic Neo', sans-serif}
 
+/*뒷배경 가리는 css*/
+
 .backgroundGray {
     position: fixed;
     left: 0%;
@@ -20,11 +22,29 @@ body	{font-family: '맑은 고딕', 'Apple SD Gothic Neo', sans-serif}
 
 /*헤더 CSS*/
 
+.box1 {
+    border-bottom: 1px solid #888888
+}
+
+/*로그인 버튼 호버 처리 손가락*/
+
+.registin:hover {
+    cursor: pointer;
+}
+
+.login:hover {
+    cursor: pointer;
+}
+
+/*헤더 float 된 것 풀어준다*/
+
 .box1 header:after {
     content: "";
     display: block;
     clear: both;
 }
+
+/*로고 css 이미지이므로 너무 커지지않게 크기 설정 및 위치 고정*/
 
 .box1 header .homeButton{
     position: absolute;
@@ -33,6 +53,14 @@ body	{font-family: '맑은 고딕', 'Apple SD Gothic Neo', sans-serif}
     display: block;
     width: 150px;
 }
+
+/*홈버튼 손가락 처리*/
+
+.homeButton:hover {
+    cursor: pointer;
+}
+
+/*헤더 영역 설정 right_header에는 로그인 버튼 설정*/
 
 .box1 header .left_header{
     float: left;
@@ -53,14 +81,14 @@ body	{font-family: '맑은 고딕', 'Apple SD Gothic Neo', sans-serif}
     vertical-align: middle;
 }
 
+/*바를 after에 추가해서 구분*/
+
 .box1 header .right_header .login:after{
     content: "|";
     margin: 0px 10px;
 }
 
-.homeButton:hover {
-    cursor: pointer;
-}
+/*모바일 버튼 제거(미디어에서 생성)*/
 
 .userIconControl {
     display: none;
@@ -82,6 +110,24 @@ body	{font-family: '맑은 고딕', 'Apple SD Gothic Neo', sans-serif}
     display: none;
 }
 
+/*캐러셀 CSS 흰색 배경을 제거함*/
+.box6 {
+    background: #343434;
+    height: 360px;
+    padding: 40px 10px 0px 10px;
+}
+.bxslider {
+}
+
+.bxslider img{
+    height: 300px;
+    width: 100%;
+}
+
+.bxsliderWrapper .bxslider{
+    background: #343434
+}
+
 /*메뉴 CSS*/
 
 .gnb {
@@ -93,6 +139,9 @@ body	{font-family: '맑은 고딕', 'Apple SD Gothic Neo', sans-serif}
 }
 .gnb ul {
 }
+
+/*리스트 스타일 제거*/
+
 .gnbClear>li {
     float: left;
     list-style: none;
@@ -116,9 +165,17 @@ body	{font-family: '맑은 고딕', 'Apple SD Gothic Neo', sans-serif}
     clear: both;
 }
 
+/*서브 메뉴가 뒤로 밀리는 현상(겹쳐짐) 제거*/
+
+.depthSubGame {
+    z-index: 300;
+}
+
 .depthSubGameLeft ul {
     list-style: none;
 }
+
+/*메인 메뉴에 마우스 올릴 시 서브메뉴 출현 및 디자인 설정*/
 
 .gnbClear>.gameBoardMenu:hover .depthSubGame {
     display: flex;
@@ -129,6 +186,8 @@ body	{font-family: '맑은 고딕', 'Apple SD Gothic Neo', sans-serif}
     height: 200px;
 }
 
+/*서브메뉴의 구역 구분*/
+
 .depthSubGameLeft {
     border-right: 2px dashed #AAAAAA;
     padding: 10px;
@@ -136,6 +195,8 @@ body	{font-family: '맑은 고딕', 'Apple SD Gothic Neo', sans-serif}
     display: flex;
     flex-direction: column;
 }
+
+/*플랙스 처리로 간단하게 구역 구분(세로로 플랙스 설정)*/
 
 .depthSubGameLeft .depthSubGameLeftContent {
     flex: 1;
@@ -151,10 +212,14 @@ body	{font-family: '맑은 고딕', 'Apple SD Gothic Neo', sans-serif}
     flex: 1;
 }
 
+/*모바일과 pc 메뉴로 마우스 위치시 기능 손가락과 색 변경*/
+
 .depthSubGameLeft .depthSubGameLeftContent li:hover, .depthSubGameSmall .depthSubGameSmallContent li:hover {
     cursor: pointer;
     color: red;
 }
+
+/*서브 메뉴의 오른쪽 구역 설정*/
 
 .depthSubGameRight {
     padding: 10px;
@@ -211,6 +276,8 @@ body	{font-family: '맑은 고딕', 'Apple SD Gothic Neo', sans-serif}
     padding: 10px;
 }
 
+/*모바일 메뉴의 설정 transision으로 부드러운 움직임 부여*/
+
 .depthSubGameSmall {
     display: none;
     position: absolute;
@@ -219,7 +286,11 @@ body	{font-family: '맑은 고딕', 'Apple SD Gothic Neo', sans-serif}
     width: 100px;
     left:20px; 
     background: #FFFFFF;
-    z-index: 100;
+    z-index: 300;
+}
+
+.depthSubCommunity {
+    z-index: 300;
 }
 
 .gnbClear>.communityMenu:hover .depthSubCommunity {
@@ -244,6 +315,9 @@ body	{font-family: '맑은 고딕', 'Apple SD Gothic Neo', sans-serif}
 }
 
 .box5 {
+    background-image: url('../img/footer.jpg');
+    background-size: 100% 100%;
+    margin: 20px 0 0 0;
 }
 .box5 footer {
     padding: 20px 0px 100px;
@@ -265,6 +339,10 @@ body	{font-family: '맑은 고딕', 'Apple SD Gothic Neo', sans-serif}
 
 
 /*커뮤니티 css*/
+
+.box7 {
+    border-bottom: 1px solid #888888
+}
 
 .box7 .boardTitle {
     float: left;
@@ -310,6 +388,10 @@ body	{font-family: '맑은 고딕', 'Apple SD Gothic Neo', sans-serif}
     padding: 0.40em;
 }
 
+.style1 li a {
+    text-decoration: none;
+}
+
 .style1 li:first-child
 {
     margin-top: 15px;
@@ -323,6 +405,10 @@ body	{font-family: '맑은 고딕', 'Apple SD Gothic Neo', sans-serif}
 /*게임 추천 글 css*/
 
 /*추천 글 헤더*/
+
+.box3 {
+    border-bottom: 1px solid #888888
+}
 
 .box3 .boardTitle {
     float: left;
@@ -399,6 +485,7 @@ body	{font-family: '맑은 고딕', 'Apple SD Gothic Neo', sans-serif}
 @media (min-width:590px) and (max-width:798px) {    
     .gameBoard {flex: 1;}
     
+/*    기존 서브 메뉴 제거*/
     .gnbClear>.gameBoardMenu:hover .depthSubGame {
         display: none;
     }
@@ -406,7 +493,19 @@ body	{font-family: '맑은 고딕', 'Apple SD Gothic Neo', sans-serif}
     .gnbClear>.gameBoardMenu:hover .depthSubGameSmall {
         display: flex;
     }
+    
+    .box8 .community {
+        margin: 0 5px 0 5px;
+        width: 48%;
+    }
+    
+/*    게시판 폰트 크기 줄임*/
+    .style1 li {
+        font-size: 0.8em;
+    }
 }
+
+/*크기 작아질 시 중앙의 게임 추천 게시판 미리보기를 바둑판으로 배치*/
 
 @media (max-width:640px) {
     .LineChange {
@@ -425,7 +524,12 @@ body	{font-family: '맑은 고딕', 'Apple SD Gothic Neo', sans-serif}
         margin: 10px 10px;
         width: auto;
     }
+    .style1 li {
+        font-size: 1em;
+    }
 }
+
+/*크기가 작아질 시 게임추천 게시글 하나 삭제*/
 
 @media(min-width: 820px) {
     .box4 .gameBoard img{
@@ -466,6 +570,8 @@ body	{font-family: '맑은 고딕', 'Apple SD Gothic Neo', sans-serif}
     
 }
 
+/*모바일 환경*/
+
 @media (max-width:590px) {
     
 /*    메뉴 제거*/
@@ -476,6 +582,8 @@ body	{font-family: '맑은 고딕', 'Apple SD Gothic Neo', sans-serif}
     
 /*    헤더 css*/
     
+    
+/*    홈버튼 중앙 배치*/
     .box1 header .homeButton{
         position: relative;
         float: none;
@@ -527,6 +635,7 @@ body	{font-family: '맑은 고딕', 'Apple SD Gothic Neo', sans-serif}
         height: 40px;
     }
 
+/*    모바일 메뉴 아이콘 배치*/
     .userIconControl {
         display: block;
     }
@@ -554,6 +663,7 @@ body	{font-family: '맑은 고딕', 'Apple SD Gothic Neo', sans-serif}
         display: none;
     }
     
+/*    모바일 로그인 메뉴를 보여주기 위해 디자인 설정*/
     .openMobileUserMenu {
         display: block;
         transition: all 0.3s;
@@ -568,6 +678,7 @@ body	{font-family: '맑은 고딕', 'Apple SD Gothic Neo', sans-serif}
         z-index: 100;
     }
     
+/*    모바일 메뉴를 보여주기 위해 디자인 설정*/
     .openMobileGnbMenu {
         display: block;
         transition: all 0.3s;

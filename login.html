@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>게임에 대한 모든 것! GAME IT</title>
     <meta name="viewport" content="width=device-width">
-    <link rel="stylesheet" href="./css/community.css">
+    <link rel="stylesheet" href="./css/login.css">
     <script src="./js/jquery.min.js" type="text/javascript"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
     <!--<link rel="stylesheet" href="./css/grid-guide.css">-->
@@ -22,14 +22,11 @@
             $(".mobileRestin").click(function() {
                 location.href = "./register.html";
             });
-            $(".communityBoardContentChildContent").click(function() {
-                	location.href = "./communityDetail.html";
-            });
             $(".gameBoardMenu>.menuTitle").click(function() {
-                	location.href = "./gameBoard.html";
+                location.href = "./gameBoard.html";
             });
             $(".communityMenu>.menuTitle").click(function() {
-                	location.href = "./community.html";
+                location.href = "./community.html";
             });
             $(".mobileGB").click(function() {
                 location.href = "./gameBoard.html";
@@ -38,7 +35,7 @@
                 location.href = "./community.html";
             });
             $(".homeButton").click(function() {
-                	location.href = "./index.html";
+                location.href = "./index.html";
             });
             $(".fa-user").click(function(){
                 $(".openMobileUserMenu").css("left","20%");
@@ -202,122 +199,33 @@
         </nav>
     </div>
     <div class="box3">
-        <div class="communityBoardFrame">
-            <div class="communityBoardTitle">
-                <h1>전체 게시 글</h1>
+        <div class="loginContent">
+            <div class="contentStyle top">
+                <input type="text" placeholder="아이디">
+                <input type="password" placeholder="비밀번호">
+                <div class="loginButton"><span>GAME IT 로그인</span></div>
             </div>
-            <div class="communityBoardMenu">
-                <div class="communityBoardMenuChild">
-                    전체 글
-                </div>
-                <div class="communityBoardMenuChild">
-                    추천 글
-                </div>
-                <div class="communityBoardMenuChild">
-                    자유 게시판
-                </div>
-                <div class="communityBoardMenuChild">
-                    토론 게시판
-                </div>
-                <div class="communityBoardMenuChild">
-                    공략 게시판
-                </div>
-            </div>
-            <div class="communityBoardSmallMenu">
-                <select class="dropDownMenu">
-                    <option value="">전체 추천</option>
-                    <option value="">PC</option>
-                    <option value="">콘솔</option>
-                    <option value="">포터블</option>
-                    <option value="">모바일</option>
-                    <option value="">온라인</option>
-                </select>
-            </div>
-            <div class="communityBoardContent">
-                <div class="communityBoardContentChild">
-                    <ul class="communityBoardContentChildContent">
-                        <li class="communityBoardContentChildTitle">게시글1</li>
-                        <li class="communityBoardContentChildOption">자유 게시판</li>
-                    </ul>
-                </div>
-                <div class="communityBoardContentChild">
-                    <ul class="communityBoardContentChildContent">
-                        <li class="communityBoardContentChildTitle">게시글2</li>
-                        <li class="communityBoardContentChildOption">자유 게시판</li>
-                    </ul>
-                </div>
-                <div class="communityBoardContentChild">
-                    <ul class="communityBoardContentChildContent">
-                        <li class="communityBoardContentChildTitle">게시글3</li>
-                        <li class="communityBoardContentChildOption">자유 게시판</li>
-                    </ul>
-                </div>
-                <div class="communityBoardContentChild">
-                    <ul class="communityBoardContentChildContent">
-                        <li class="communityBoardContentChildTitle">게시글4</li>
-                        <li class="communityBoardContentChildOption">공략 게시판</li>
-                    </ul>
-                </div>
-                <div class="communityBoardContentChild">
-                    <ul class="communityBoardContentChildContent">
-                        <li class="communityBoardContentChildTitle">게시글5</li>
-                        <li class="communityBoardContentChildOption">자유 게시판</li>
-                    </ul>
-                </div>
-                <div class="communityBoardContentChild">
-                    <ul class="communityBoardContentChildContent">
-                        <li class="communityBoardContentChildTitle">게시글6</li>
-                        <li class="communityBoardContentChildOption">토론 게시판</li>
-                    </ul>
-                </div>
-                <div class="communityBoardContentChild">
-                    <ul class="communityBoardContentChildContent">
-                        <li class="communityBoardContentChildTitle">게시글7</li>
-                        <li class="communityBoardContentChildOption">자유 게시판</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="pageNumber">
-                <ul class="pageNumberFrame">
-                    <li class="pageNumberButton prevStart">|처음|</li>
-                    <li class="pageNumberButton prev">〈 이전</li>
-                    <li class="barFloat">&nbsp;|&nbsp;</li>
-                    <li class="pageNumberButton one">[1]</li>
-                    <li class="pageNumberButton two">[2]</li>
-                    <li class="pageNumberButton three">[3]</li>
-                    <li class="pageNumberButton four">[4]</li>
-                    <li class="pageNumberButton five">[5]</li>
-                    <li class="barFloat">&nbsp;|&nbsp;</li>
-                    <li class="pageNumberButton next">다음 〉</li>
-                    <li class="pageNumberButton nextEnd">|마지막|</li>
-                </ul>
-                <ul class="pageNumberFrameSmall">
-                    <li class="pageNumberButton prev">〈 </li>
-                    <li class="pageNumberButton one">1</li>
-                    <li class="pageNumberButton two">2</li>
-                    <li class="pageNumberButton three">3</li>
-                    <li class="pageNumberButton four">4</li>
-                    <li class="pageNumberButton five">5</li>
-                    <li class="pageNumberButton next"> 〉</li>
-                </ul>
+            <div class="contentStyle bottom">
+                <div><span class="fab fa-facebook"> 페이스북</span></div>
+                <div><span class="fab fa-google"> 구글</span></div>
             </div>
         </div>
     </div>
     <div class="box5">
-        <footer>
-           <img src="./img/GAMEIT.png" alt="GAMEIT LOGO">
-           <ul>
-              <li class="brPlz">인재 채용 | 회사 소개 | 고객지원 | 보도 자료 | 보도 자료</li>
-              <li>©2018 GAME IT, INC. 모든 권리는 GAME IT 에 있습니다.</li>
-              <li class="brPlz">여기서 언급된 다른 모든 상표는 각 소유권자들의 자산입니다.</li>
-              <li class="brPlz">개인정보 처리방침 | 법률관련 문서</li>
-              <li>GAME IT</li>
-              <li>주소: 서울특별시 구로구 고척동 경인로 445</li>
-              <li>대표 번호: 010-8988-2770 | 이메일: vaeazar@naver.com</li>
-              <li>사업자 등록 번호: 000-00-00000 | 통신 판매업 신고 번호: 동양-00001호 | 사업자정보확인</li>
-              <li>대표이사: 정대규 | 개인정보 보호책임자: 정대규 대표이사</li> 
-           </ul>
-        </footer>
+    <footer>
+       <img src="./img/GAMEIT.png" alt="GAMEIT LOGO">
+       <ul>
+          <li class="brPlz">인재 채용 | 회사 소개 | 고객지원 | 보도 자료 | 보도 자료</li>
+          <li>©2018 GAME IT, INC. 모든 권리는 GAME IT 에 있습니다.</li>
+          <li class="brPlz">여기서 언급된 다른 모든 상표는 각 소유권자들의 자산입니다.</li>
+          <li class="brPlz">개인정보 처리방침 | 법률관련 문서</li>
+          <li>GAME IT</li>
+          <li>주소: 서울특별시 구로구 고척동 경인로 445</li>
+          <li>대표 번호: 010-8988-2770 | 이메일: vaeazar@naver.com</li>
+          <li>사업자 등록 번호: 000-00-00000 | 통신 판매업 신고 번호: 동양-00001호 | 사업자정보확인</li>
+          <li>대표이사: 정대규 | 개인정보 보호책임자: 정대규 대표이사</li> 
+       </ul>
+    </footer>
     </div>
 </body>
 </html>

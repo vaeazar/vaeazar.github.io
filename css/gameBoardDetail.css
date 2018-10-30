@@ -18,7 +18,19 @@ body	{font-family: '맑은 고딕', 'Apple SD Gothic Neo', sans-serif}
     opacity: 0.8;
 }
 
-/*헤더 CSS*/
+/*헤더 CSS style_my와 같음*/
+
+.box1 {
+    border-bottom: 1px solid #888888
+}
+
+.registin:hover {
+    cursor: pointer;
+}
+
+.login:hover {
+    cursor: pointer;
+}
 
 .box1 header:after {
     content: "";
@@ -82,7 +94,7 @@ body	{font-family: '맑은 고딕', 'Apple SD Gothic Neo', sans-serif}
     display: none;
 }
 
-/*메뉴 CSS*/
+/*메뉴 CSS style_my와 같음*/
 
 .gnb {
     content: "";
@@ -127,6 +139,7 @@ body	{font-family: '맑은 고딕', 'Apple SD Gothic Neo', sans-serif}
     background: #FFFFFF;
     width: 750px;
     height: 200px;
+    z-index: 300;
 }
 
 .depthSubGameLeft {
@@ -237,14 +250,18 @@ body	{font-family: '맑은 고딕', 'Apple SD Gothic Neo', sans-serif}
     color: red;
 }
 
-/*푸터 css*/
+/*푸터 css style_my와 같음*/
 
 .brPlz {
     margin: 0px 0px 10px 0px;
 }
 
 .box5 {
+    background-image: url('../img/footer.jpg');
+    background-size: 100% 100%;
+    margin: 20px 0 0 0;
 }
+
 .box5 footer {
     padding: 20px 0px 100px;
 }
@@ -262,7 +279,9 @@ body	{font-family: '맑은 고딕', 'Apple SD Gothic Neo', sans-serif}
 .box5 .brPlz {
 }
 
-/*왼쪽 메뉴 css*/
+/*리모콘 메뉴 css*/
+
+/*오른쪽에서 화면을 따라다니는 메뉴를 설정 위치 고정으로 스크롤해도 보임*/
 
 .leftMenuFrame {
     position: fixed;
@@ -301,6 +320,7 @@ body	{font-family: '맑은 고딕', 'Apple SD Gothic Neo', sans-serif}
 
 /*게시판 본문 css*/
 
+/*중앙의 게시글 디자인을 설정 화면이 커져도 중앙으로 오도록 margin auto*/
 .mainFrame {
     max-width: 1000px;
     min-width: 758px;
@@ -420,12 +440,14 @@ body	{font-family: '맑은 고딕', 'Apple SD Gothic Neo', sans-serif}
 
 /*설정 css*/
 
+/*화면이 작아질 시 리모콘 메뉴를 축소해 화면을 가리지 않도록 해줌*/
 .tooBig{
     display: none;
 }
 
 /*미디어 Css*/
 
+/*화면이 충분히 클 경우 리모콘 메뉴 항시 활성화*/
 @media (max-width: 1310px) {
     .mainFrame {
         margin: auto;
@@ -441,6 +463,7 @@ body	{font-family: '맑은 고딕', 'Apple SD Gothic Neo', sans-serif}
     }
 }
 
+/*style_my와 같이 화면이 작아질 시 서브메뉴를 대체*/
 @media (min-width:590px) and (max-width:798px) {
     
     .gnbClear>.gameBoardMenu:hover .depthSubGame {
@@ -452,6 +475,7 @@ body	{font-family: '맑은 고딕', 'Apple SD Gothic Neo', sans-serif}
     }
 }
 
+/*화면이 작아질 시 텍스트와 이미지를 조정*/
 @media (min-width:590px) and (max-width:798px) {
     .mainFrame {
         max-width: 758px;
@@ -469,7 +493,6 @@ body	{font-family: '맑은 고딕', 'Apple SD Gothic Neo', sans-serif}
     }
     .mainFrame .contentContent img {
         display: block;
-        margin: auto;
         max-width: 400px;
     }
     
@@ -496,9 +519,13 @@ body	{font-family: '맑은 고딕', 'Apple SD Gothic Neo', sans-serif}
 }
 */
 
-
+/*모바일 환경에서의 텍스트 조정 및 하단 게시판 이동 버튼 수정*/
 @media (max-width:590px) {
-       
+    
+    .box1 {
+        background: #8cbfe5;
+    }
+    
 /*    본문 css*/
     
     .mainFrame {
@@ -522,7 +549,7 @@ body	{font-family: '맑은 고딕', 'Apple SD Gothic Neo', sans-serif}
     }
     
 /*    리모콘 css*/
-    
+/*모바일에서는 리모콘 제거*/
     .leftMenuFrame {
         display: none;
     }
@@ -585,7 +612,7 @@ body	{font-family: '맑은 고딕', 'Apple SD Gothic Neo', sans-serif}
         display: none;
     }
     
-/*    헤더 css*/
+/*    헤더 css  style_my와 같음*/
     
     .box1 header .homeButton{
         position: relative;

@@ -8,6 +8,7 @@
 body	{font-family: '맑은 고딕', 'Apple SD Gothic Neo', sans-serif}
 
 .backgroundGray {
+    display: none;
     position: fixed;
     left: 0%;
     top: 0%;
@@ -18,7 +19,7 @@ body	{font-family: '맑은 고딕', 'Apple SD Gothic Neo', sans-serif}
     opacity: 0.8;
 }
 
-/*헤더 CSS*/
+/*헤더 CSS style_my와 같음*/
 
 .box1 {
     border-bottom: 1px solid #888888
@@ -94,7 +95,8 @@ body	{font-family: '맑은 고딕', 'Apple SD Gothic Neo', sans-serif}
     display: none;
 }
 
-/*메뉴 CSS*/
+
+/*메뉴 CSS style_my와 같음*/
 
 .gnb {
     content: "";
@@ -126,6 +128,10 @@ body	{font-family: '맑은 고딕', 'Apple SD Gothic Neo', sans-serif}
     content: "";
     display: block;
     clear: both;
+}
+
+.depthSubGame {
+    z-index: 300;
 }
 
 .depthSubGameLeft ul {
@@ -231,7 +237,11 @@ body	{font-family: '맑은 고딕', 'Apple SD Gothic Neo', sans-serif}
     width: 100px;
     left:20px; 
     background: #FFFFFF;
-    z-index: 100;
+    z-index: 300;
+}
+
+.depthSubCommunity {
+    z-index: 300;
 }
 
 .gnbClear>.communityMenu:hover .depthSubCommunity {
@@ -249,7 +259,7 @@ body	{font-family: '맑은 고딕', 'Apple SD Gothic Neo', sans-serif}
     color: red;
 }
 
-/*푸터 css*/
+/*푸터 css style_my와 같음*/
 
 .brPlz {
     margin: 0px 0px 10px 0px;
@@ -260,7 +270,6 @@ body	{font-family: '맑은 고딕', 'Apple SD Gothic Neo', sans-serif}
     background-size: 100% 100%;
     margin: 20px 0 0 0;
 }
-
 .box5 footer {
     padding: 20px 0px 100px;
 }
@@ -278,175 +287,74 @@ body	{font-family: '맑은 고딕', 'Apple SD Gothic Neo', sans-serif}
 .box5 .brPlz {
 }
 
-/*게임보드 css*/
+/*로그인 및 회원가입 div 디자인*/
 
-.box3 {
-}
-
-.communityBoardFrame {
-    width: 80%;
-    margin: auto;
-}
-
-.communityBoardSmallMenu{
-    display: none;
-}
-
-.communityBoardFrame .communityBoardMenu {
-    margin-top: 10px;
-    border-bottom: 1px solid #999999;
-}
-
-.communityBoardFrame .communityBoardMenu .communityBoardMenuChild{
-    float: left;
-    padding: 0 10px 0;
-}
-
-.communityBoardFrame .communityBoardMenu .communityBoardMenuChild:hover {
-    cursor: pointer;
-    color: #BBBBBB;
-}
-
-.communityBoardFrame .communityBoardMenu .communityBoardMenuChild:first-child {
-    color: #BBBBBB;
-    border-bottom: 3px solid #ff7a00;
-}
-
-.communityBoardFrame .communityBoardMenu:after {
-    content: "";
+.box3 .loginContent{
     display: block;
-    clear: both;
+    max-width: 400px;
+    margin: 100px auto;
+    border: 1px solid #000000;
+    border-radius: 10px;
+    padding: 20px;
 }
 
-.communityBoardFrame .communityBoardContent {
-    
+.box3 .loginContent .contentStyle input {
+    font-size: 20px;
 }
 
-.communityBoardFrame .communityBoardContent .communityBoardContentChild{
-    padding: 10px;
-    border-bottom: 1px solid #999999;
-}
-
-.communityBoardFrame .communityBoardContent .communityBoardContentChild .communityBoardContentChildContent {
-    list-style: none;
-}
-
-.communityBoardFrame .communityBoardContent .communityBoardContentChild .communityBoardContentChildContent:hover {
-    cursor: pointer;
-}
-
-.communityBoardFrame .communityBoardContent .communityBoardContentChild .communityBoardContentChildContent:after {
-    content: "";
+.box3 .loginContent .contentStyle input,
+.box3 .loginContent .contentStyle .loginButton{
     display: block;
-    clear: both;
+    margin: 10px 0px;
+    height: 40px;
+    width: 100%;
 }
 
-.communityBoardFrame .communityBoardContent .communityBoardContentChild .communityBoardContentChildContent
-.communityBoardContentChildTitle {
-    font-size: 1.5em;
+.box3 .loginContent .contentStyle .loginButton {
+    display: flex;
+    border: 1px solid #353535;
+    background: #2d96ff;
+    border-radius: 5px;
+    transition: all 0.4s;
 }
 
-.style1
-{
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
-
-.style1 li
-{
-    border-top: solid 1px #a7a7a7;
-    padding: 0.40em;
-}
-
-.style1 li:first-child
-{
-    margin-top: 15px;
-}
-
-.style1 li:last-child
-{
-    border-bottom: solid 1px #a7a7a7;
-}
-
-/*페이지 번호*/
-
-.communityBoardFrame .pageNumber .pageNumberFrame .pageNumberButton, .pageNumberFrameSmall .pageNumberButton{
-    float: left;
-    margin: 5px;
-}
-
-.communityBoardFrame .pageNumber .pageNumberFrame {
-}
-
-.communityBoardFrame .pageNumber .pageNumberFrame .pageNumberButton {
-    float: left;
-    margin: 5px;
-}
-
-.communityBoardFrame .pageNumber .pageNumberFrame .one {
-    color: #BBBBBB;
-}
-
-.communityBoardFrame .pageNumber .pageNumberFrame .pageNumberButton:hover
-, .pageNumberFrameSmall .pageNumberButton:hover {
-    background: #fff;
-    cursor: pointer;
-    color: #BBBBBB;
-}
-
-.communityBoardFrame .pageNumber .pageNumberFrame .barFloat {
-    float: left;
-    margin: 5px 0;
-}
-
-.communityBoardFrame .pageNumber .pageNumberFrame {
-    list-style: none;
+.box3 .loginContent .contentStyle .loginButton span {
+    flex: 1;
     display: inline-block;
-}
-
-
-.pageNumberFrameSmall {
-    list-style: none;
-    display: none;
-}
-
-.pageNumberFrameSmall li {
-    border: 1px solid;
-    border-radius: 7px;
-    color: black;
-    
-}
-
-.pageNumberFrameSmall .pageNumberButton{
-    min-width: 20px;
-    padding: 2px;
-    background: #CCCCCC;
-}
-
-.pageNumberFrameSmall .one {
-    background: #ffffff;
-}
-
-.communityBoardFrame .pageNumber .pageNumberFrame:after, .pageNumberFrameSmall:after {
-    content: "";
-    display: block;
-    clear: both;
-}
-
-.communityBoardFrame .pageNumber {
     text-align: center;
+    font-size: 20px;
+    padding-top: 5px;
+    color: white;
 }
 
-.hideThis{
-    display: none;
+.box3 .loginContent .contentStyle .loginButton:hover {
+    border: 1px solid #06f5ff;
+    background: #56b3f7;
+    cursor: pointer;
 }
 
-.showThis{
-    display: block;
+.box3 .loginContent .bottom{
+    display: flex;
 }
 
-/*미디어 쿼리*/
+.box3 .loginContent .bottom div {
+    flex: 1;
+    text-align: center;
+    border: 1px solid #2700a8;
+    background: #0055c9;
+    transition: all 0.4s;
+    padding: 5px;
+    margin: 5px;
+    color: white;
+}
+
+.box3 .loginContent .bottom div:hover {
+    border: 1px solid #06f5ff;
+    background: #3e91ff;
+    cursor: pointer;
+}
+
+/*미디어 쿼리 style_my와 같음*/
 
 @media (min-width:590px) and (max-width:798px) {
     
@@ -469,9 +377,7 @@ body	{font-family: '맑은 고딕', 'Apple SD Gothic Neo', sans-serif}
     
 /*    헤더 css*/
     
-    .box1 {
-        background: #8cbfe5;
-    }
+    
     
     .box1 header .homeButton{
         position: relative;
@@ -601,35 +507,6 @@ body	{font-family: '맑은 고딕', 'Apple SD Gothic Neo', sans-serif}
         cursor: pointer
     }
     
-/*    모바일 카테고리 설정 css*/
-    
-    .communityBoardMenu {
-        display: none;
-    }
-    .communityBoardSmallMenu{
-        display: block;
-        width: auto;
-        margin: 10px 0;
-    }
-
-    .communityBoardSmallMenu .dropDownMenu{
-        width: 100%;
-        font-size: 1em;
-        padding: 4px;
-        border: 2px solid;
-        border-radius: 20px;
-    }
-    
-/*    하단 스위치 css*/
-    
-    .pageNumber .pageNumberFrame .pageNumberButton, .pageNumberFrame .barFloat{
-        display: none;
-    }
-    
-    .pageNumberFrameSmall {
-        display: inline-block;
-    }
-    
 /*    설정 css*/
     
     .hideThis{
@@ -646,5 +523,7 @@ body	{font-family: '맑은 고딕', 'Apple SD Gothic Neo', sans-serif}
         font-size: 0.7em;
     }
 }
+
+
 
 

@@ -18,7 +18,19 @@ body	{font-family: '맑은 고딕', 'Apple SD Gothic Neo', sans-serif}
     opacity: 0.8;
 }
 
-/*헤더 CSS*/
+/*헤더 CSS  style_my와 같음*/
+
+.box1 {
+    border-bottom: 1px solid #888888
+}
+
+.registin:hover {
+    cursor: pointer;
+}
+
+.login:hover {
+    cursor: pointer;
+}
 
 .box1 header:after {
     content: "";
@@ -81,7 +93,7 @@ body	{font-family: '맑은 고딕', 'Apple SD Gothic Neo', sans-serif}
 .openMobileGnbMenu {
     display: none;
 }
-/*메뉴 CSS*/
+/*메뉴 CSS style_my와 같음*/
 
 .gnb {
     content: "";
@@ -236,14 +248,18 @@ body	{font-family: '맑은 고딕', 'Apple SD Gothic Neo', sans-serif}
     color: red;
 }
 
-/*푸터 css*/
+/*푸터 css style_my와 같음*/
 
 .brPlz {
     margin: 0px 0px 10px 0px;
 }
 
 .box5 {
+    background-image: url('../img/footer.jpg');
+    background-size: 100% 100%;
+    margin: 20px 0 0 0;
 }
+
 .box5 footer {
     padding: 20px 0px 100px;
 }
@@ -263,6 +279,8 @@ body	{font-family: '맑은 고딕', 'Apple SD Gothic Neo', sans-serif}
 
 /*게임보드 css*/
 
+/*최대한 리스트 형식으로 디자인*/
+
 .box3 {
 }
 
@@ -271,9 +289,14 @@ body	{font-family: '맑은 고딕', 'Apple SD Gothic Neo', sans-serif}
     margin: auto;
 }
 
+/*구역을 구분하기 위해 보더와 마진*/
 .gameBoardFrame .gameBoardMenu {
     margin-top: 10px;
     border-bottom: 1px solid #999999;
+}
+
+.gmaeBoardSmallMenu{
+    display: none;
 }
 
 .gameBoardFrame .gameBoardMenu .gameBoardMenuChild{
@@ -306,6 +329,7 @@ body	{font-family: '맑은 고딕', 'Apple SD Gothic Neo', sans-serif}
     border-bottom: 1px solid #999999;
 }
 
+/*게시판 미리보는 이미지 설정*/
 .gameBoardFrame .gameBoardContent .gameBoardContentChild .gameBoardContentChildImg {
     float: left;
     width: 4em;
@@ -352,23 +376,27 @@ body	{font-family: '맑은 고딕', 'Apple SD Gothic Neo', sans-serif}
     border-bottom: solid 1px #a7a7a7;
 }
 
-/*페이지 번호*/
+/*게시판 페이지 번호*/
 
-.gameBoardFrame .pageNumber .pageNumberFrame .pageNumberButton {
+/*모바일 페이지 번호와 pc 페이지 번호의 버튼 설정*/
+.gameBoardFrame .pageNumber .pageNumberFrame .pageNumberButton, .pageNumberFrameSmall .pageNumberButton{
     float: left;
     margin: 5px;
 }
 
-.gameBoardFrame .pageNumber .pageNumberFrame .one {
+.gameBoardFrame .pageNumber .pageNumberFrame .one{
     color: #BBBBBB;
 }
 
-.gameBoardFrame .pageNumber .pageNumberFrame .pageNumberButton:hover {
+/*모바일 페이지, pc페이지의 번호 버튼 마우스 오버 설정*/
+.gameBoardFrame .pageNumber .pageNumberFrame .pageNumberButton:hover
+, .pageNumberFrameSmall .pageNumberButton:hover {
+    background: #fff;
     cursor: pointer;
     color: #BBBBBB;
 }
 
-.gameBoardFrame .pageNumber .pageNumberFrame .barFloat {
+.gameBoardFrame .pageNumber .pageNumberFrame .barFloat, .pageNumberFrameSmall .barFloat {
     float: left;
     margin: 5px 0;
 }
@@ -378,7 +406,30 @@ body	{font-family: '맑은 고딕', 'Apple SD Gothic Neo', sans-serif}
     display: inline-block;
 }
 
-.gameBoardFrame .pageNumber .pageNumberFrame:after {
+/*모바일 버튼 숨김*/
+.pageNumberFrameSmall {
+    list-style: none;
+    display: none;
+}
+
+.pageNumberFrameSmall li {
+    border: 1px solid;
+    border-radius: 7px;
+    color: black;
+    
+}
+
+.pageNumberFrameSmall .pageNumberButton{
+    min-width: 20px;
+    padding: 2px;
+    background: #CCCCCC;
+}
+
+.pageNumberFrameSmall .one {
+    background: #ffffff;
+}
+
+.gameBoardFrame .pageNumber .pageNumberFrame:after, .pageNumberFrameSmall:after {
     content: "";
     display: block;
     clear: both;
@@ -425,7 +476,11 @@ body	{font-family: '맑은 고딕', 'Apple SD Gothic Neo', sans-serif}
         display: none;
     }
     
-/*    헤더 css*/
+/*    헤더 css style_my와 같음*/
+    
+    .box1 {
+        background: #8cbfe5;
+    }
     
     .box1 header .homeButton{
         position: relative;
@@ -505,6 +560,8 @@ body	{font-family: '맑은 고딕', 'Apple SD Gothic Neo', sans-serif}
         display: none;
     }
     
+/*    메뉴 css*/
+    
     .openMobileUserMenu {
         display: block;
         transition: all 0.3s;
@@ -553,6 +610,35 @@ body	{font-family: '맑은 고딕', 'Apple SD Gothic Neo', sans-serif}
     
     .mobileCloseButton:hover {
         cursor: pointer
+    }
+    
+/*    모바일 카테고리 설정 css*/
+
+/*    모바일의 경우 상단 메뉴(게시판 이동) 역할을 하던 div를 제거하고 셀렉트 태그를 이용*/
+    .gameBoardMenu {
+        display: none;
+    }
+    .gmaeBoardSmallMenu{
+        display: block;
+        width: auto;
+        margin: 10px 0;
+    }
+
+    .gmaeBoardSmallMenu .dropDownMenu{
+        width: 100%;
+        font-size: 1em;
+        padding: 4px;
+        border: 2px solid;
+        border-radius: 20px;
+    }
+    
+/*    하단 스위치 css 페이지 버튼을 모바일 버튼으로 교체*/
+    .pageNumber .pageNumberFrame .pageNumberButton, .pageNumberFrame .barFloat{
+        display: none;
+    }
+    
+    .pageNumberFrameSmall {
+        display: inline-block;
     }
     
 /*    설정 css*/

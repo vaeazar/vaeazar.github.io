@@ -20,7 +20,19 @@ body	{font-family: '맑은 고딕', 'Apple SD Gothic Neo', sans-serif}
     opacity: 0.8;
 }
 
-/*헤더 CSS*/
+/*헤더 CSS  style_my와 같음*/
+
+.box1 {
+    border-bottom: 1px solid #888888
+}
+
+.registin:hover {
+    cursor: pointer;
+}
+
+.login:hover {
+    cursor: pointer;
+}
 
 .box1 header:after {
     content: "";
@@ -84,7 +96,7 @@ body	{font-family: '맑은 고딕', 'Apple SD Gothic Neo', sans-serif}
     display: none;
 }
 
-/*메뉴 CSS*/
+/*메뉴 CSS style_my와 같음*/
 
 .gnb {
     content: "";
@@ -247,7 +259,11 @@ body	{font-family: '맑은 고딕', 'Apple SD Gothic Neo', sans-serif}
 }
 
 .box5 {
+    background-image: url('../img/footer.jpg');
+    background-size: 100% 100%;
+    margin: 20px 0 0 0;
 }
+
 .box5 footer {
     padding: 20px 0px 100px;
 }
@@ -467,6 +483,10 @@ body	{font-family: '맑은 고딕', 'Apple SD Gothic Neo', sans-serif}
 }
 
 @media (max-width:590px) {
+    
+    .box1 {
+        background: #8cbfe5;
+    }
     
 /*    본문 css*/
     

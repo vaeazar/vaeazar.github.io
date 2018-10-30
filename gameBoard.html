@@ -10,6 +10,18 @@
     <!--<link rel="stylesheet" href="./css/grid-guide.css">-->
     <script type="text/javascript">
         $(document).ready(function() {            
+            $(".login").click(function() {
+                location.href = "./login.html";       
+            });
+            $(".mobileLogin").click(function() {
+                location.href = "./login.html";       
+            });
+            $(".registin").click(function() {
+                location.href = "./register.html";
+            });
+            $(".mobileRestin").click(function() {
+                location.href = "./register.html";
+            });
             $(".gameBoardContentChildImg").click(function() {
                 	location.href = "./gameBoardDetail.html";
             });
@@ -101,7 +113,7 @@
                             <span class="mobileCloseButton">Ⅹ</span>
                         </li>
                         <li class="openMobileUserMenuLi mobileLogin">로그인</li>
-                        <li class="openMobileUserMenuLi">회원가입</li>
+                        <li class="openMobileUserMenuLi mobileRestin">회원가입</li>
                         <li class="openMobileUserMenuLi">ID / PW 찾기</li>
                     </ul>
                 </div>
@@ -130,29 +142,29 @@
                             </span>
                             <div class="depthSubGameRightFrame">
                                 <div class="depthSubGameRightItem">
-                                    <img src="img/noneImage.jpg" alt="">
-                                    <span>게시글 제목</span>
-                                    <span>상품 명</span>
+                                    <img src="img/%EC%96%B4%ED%81%AC%EC%98%A4%EB%A6%AC%EC%A7%84.jpg" alt="">
+                                    <span>갓겜 추천</span>
+                                    <span>어세신크리드</span>
                                 </div>
                                 <div class="depthSubGameRightItem">
-                                    <img src="img/noneImage.jpg" alt="">
-                                    <span>게시글 제목</span>
-                                    <span>상품 명</span>
+                                    <img src="img/unworhty.jpg" alt="">
+                                    <span>닼소풍 게임</span>
+                                    <span>unworthy</span>
                                 </div>
                                 <div class="depthSubGameRightItem">
-                                    <img src="img/noneImage.jpg" alt="">
-                                    <span>게시글 제목</span>
-                                    <span>상품 명</span>
+                                    <img src="img/cardcraft.png" alt="">
+                                    <span>모바일 갓겜</span>
+                                    <span>cardCraft</span>
                                 </div>
                                 <div class="depthSubGameRightItem">
-                                    <img src="img/noneImage.jpg" alt="">
-                                    <span>게시글 제목</span>
-                                    <span>상품 명</span>
+                                    <img src="img/%ED%9E%88%EC%98%A4%EC%8A%A4.jpg" alt="">
+                                    <span>시공조아</span>
+                                    <span>히오스</span>
                                 </div>
                                 <div class="depthSubGameRightItem">
-                                    <img src="img/noneImage.jpg" alt="">
-                                    <span>게시글 제목</span>
-                                    <span>상품 명</span>
+                                    <img src="img/%EC%96%B8%EC%B0%A8%ED%8B%B0%EB%93%9C.jpg" alt="">
+                                    <span>늦은 리뷰(12)</span>
+                                    <span>언차티드4</span>
                                 </div>
                             </div>
                         </div>
@@ -216,6 +228,16 @@
                 <div class="gameBoardMenuChild">
                     온라인
                 </div>
+            </div>
+            <div class="gmaeBoardSmallMenu">
+                <select class="dropDownMenu">
+                    <option value="">전체 추천</option>
+                    <option value="">PC</option>
+                    <option value="">콘솔</option>
+                    <option value="">포터블</option>
+                    <option value="">모바일</option>
+                    <option value="">온라인</option>
+                </select>
             </div>
             <div class="gameBoardContent">
                 <div class="gameBoardContentChild">
@@ -281,6 +303,15 @@
                     <li class="barFloat">&nbsp;|&nbsp;</li>
                     <li class="pageNumberButton next">다음 〉</li>
                     <li class="pageNumberButton nextEnd">|마지막|</li>
+                </ul>
+                <ul class="pageNumberFrameSmall">
+                    <li class="pageNumberButton prev">〈 </li>
+                    <li class="pageNumberButton one">1</li>
+                    <li class="pageNumberButton two">2</li>
+                    <li class="pageNumberButton three">3</li>
+                    <li class="pageNumberButton four">4</li>
+                    <li class="pageNumberButton five">5</li>
+                    <li class="pageNumberButton next"> 〉</li>
                 </ul>
             </div>
         </div>
